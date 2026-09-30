@@ -50,6 +50,7 @@ class _AccionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return SizedBox(
       height: 42,
       child: ElevatedButton.icon(
@@ -57,8 +58,8 @@ class _AccionButton extends StatelessWidget {
         icon: Icon(icon, size: 18),
         label: Text(label),
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blue[600],
-          foregroundColor: Colors.white,
+          backgroundColor: colorScheme.primary,
+          foregroundColor: colorScheme.onPrimary,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
           padding: const EdgeInsets.symmetric(horizontal: 8),
         ),

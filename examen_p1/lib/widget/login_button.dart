@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:examen_p1/theme/tienda_theme.dart';
 
 class LoginButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -14,7 +15,7 @@ class LoginButton extends StatelessWidget {
     this.text = 'Aceptar',
     this.width = 140,
     this.height = 48,
-    this.backgroundColor = const Color(0xFF1E88E5),
+    this.backgroundColor = TiendaTheme.colorPrimario,
     this.textColor = Colors.white,
   });
 

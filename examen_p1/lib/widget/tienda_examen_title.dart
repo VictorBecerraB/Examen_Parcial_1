@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:examen_p1/theme/tienda_theme.dart';
 
 class TiendaExamenTitle extends StatelessWidget {
   final String text;
@@ -12,7 +13,7 @@ class TiendaExamenTitle extends StatelessWidget {
     this.text = 'TIENDA EXAMEN',
     this.icon = Icons.shopping_basket_sharp,
     this.fontSize = 36,
-    this.color = Colors.blue,
+    this.color = TiendaTheme.colorPrimario,
     this.iconSize = 34,
   });
 
@@ -29,7 +30,7 @@ class TiendaExamenTitle extends StatelessWidget {
             fontSize: fontSize,
             fontWeight: FontWeight.w800,
             color: color,
-            letterSpacing: 0.5,
+            letterSpacing: 0,
           ),
         ),
       ],

@@ -50,6 +50,7 @@ class _BottomNavItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return GestureDetector(
       onTap: onTap,
       behavior: HitTestBehavior.opaque,
@@ -61,13 +62,17 @@ class _BottomNavItem extends StatelessWidget {
             Icon(
               icon,
               size: 28,
-              color: selected ? Colors.blue[600] : Colors.grey,
+              color: selected
+                  ? colorScheme.primary
+                  : colorScheme.onSurfaceVariant,
             ),
             const SizedBox(height: 4),
             Text(
               label,
               style: TextStyle(
-                color: selected ? Colors.blue[600] : Colors.grey,
+                color: selected
+                    ? colorScheme.primary
+                    : colorScheme.onSurfaceVariant,
                 fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
                 fontSize: 14,
               ),

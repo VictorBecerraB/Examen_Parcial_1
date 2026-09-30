@@ -9,7 +9,7 @@ class HeaderUsuarios extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.blue[500],
+      color: Theme.of(context).colorScheme.primary,
       padding: const EdgeInsets.symmetric(vertical: 18),
       child: Text(
         title,

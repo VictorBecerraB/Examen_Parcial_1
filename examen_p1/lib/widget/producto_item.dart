@@ -24,7 +24,20 @@ class ProductoItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: Colors.black12),
               ),
-              child: Icon(producto.icon, size: 28, color: producto.iconColor),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(9),
+                child: producto.imageUrl.isEmpty
+                    ? Icon(producto.icon, size: 28, color: producto.iconColor)
+                    : Image.network(
+                        producto.imageUrl,
+                        fit: BoxFit.contain,
+                        errorBuilder: (context, error, stackTrace) => Icon(
+                          producto.icon,
+                          size: 28,
+                          color: producto.iconColor,
+                        ),
+                      ),
+              ),
             ),
             const SizedBox(width: 14),
             Expanded(

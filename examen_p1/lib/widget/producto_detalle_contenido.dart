@@ -8,6 +8,7 @@ class ProductoDetalleContenido extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorPrimario = Theme.of(context).colorScheme.primary;
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 28, 16, 20),
       child: Column(
@@ -47,7 +48,7 @@ class ProductoDetalleContenido extends StatelessWidget {
             'Precio: \$${producto.price.toStringAsFixed(2)}',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.blue[600],
+              color: colorPrimario,
               fontSize: 22,
               fontWeight: FontWeight.w700,
             ),

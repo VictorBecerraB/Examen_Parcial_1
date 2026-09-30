@@ -1,10 +1,11 @@
+import 'package:examen_p1/model/carrito.dart';
 import 'package:flutter/material.dart';
 
 class CarritoItem extends StatelessWidget {
-  final String cliente;
+  final Carrito carrito;
   final VoidCallback? onTap;
 
-  const CarritoItem({super.key, required this.cliente, this.onTap});
+  const CarritoItem({super.key, required this.carrito, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +29,19 @@ class CarritoItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      cliente,
+                      'Carrito #${carrito.id}',
                       style: const TextStyle(
                         fontSize: 16,
                         color: Color(0xFF333333),
                       ),
                     ),
                     const SizedBox(height: 2),
-                    const Text(
-                      'Click para ver detalles',
-                      style: TextStyle(fontSize: 14, color: Color(0xFF888888)),
+                    Text(
+                      '${carrito.productos.length} productos · usuario #${carrito.userId}',
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: Color(0xFF888888),
+                      ),
                     ),
                   ],
                 ),
